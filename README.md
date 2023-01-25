@@ -1,5 +1,5 @@
 ### Abstract:
-We created an application that allows users to generate, save, and delete random color palettes. 
+My project group and I created an application that allows users to generate, save, and delete random color palettes. I added an extenstion to the project to make the colors cohesive. The technique for making the palette cohesive was using a Tatradic Palette (with an additional color being a dark/lighter version of the final tatradic color).
 
 ### Installation Instructions:
 1. Copy the SSH key on GitHub inside the code dropdown
@@ -9,7 +9,7 @@ We created an application that allows users to generate, save, and delete random
 
 ### Preview of App:
 [GitHub Pages Link](https://qrispi.github.io/colorandom/)
-![image](assets/preview.gif)
+![image](assets/screenshot.jpg)
 
 ### Context:
 This project was created during our 4th week in Turing. It took an estimated 20 hours of group collaboration and some additional solo/paired(2) sessions to implement the required functionality.
