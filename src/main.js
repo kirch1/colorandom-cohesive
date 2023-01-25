@@ -11,6 +11,7 @@ newPaletteButton.addEventListener('click', changePaletteColors);
 savePaletteButton.addEventListener('click', savePalette);
 colorWidgetParent.addEventListener('click', toggleColorLock);
 savedSection.addEventListener('click', deleteSavedPalette);
+savedSection.addEventListener('dblclick', recallSavedPalette);
 
 
 var dragID;
@@ -38,15 +39,17 @@ function displayCurrentPalette() {
     colorWidgetParent.innerHTML = '';
     for (var i = 0; i < 5; i++) {
         var imgString = 'Unlock.png';
+        var altText = "Unlock icon";
         if (currentPalette.colors[i].locked) {
             imgString = 'Lock.png';
+            altText = "Lock icon";
         }
         colorWidgetParent.innerHTML +=
             `<article class="color-widget">
                 <div data-index-number="${i}" style="background-color:${currentPalette.colors[i].hex}" class="color-box"></div>
                 <div class="color-box-footer">
                     <p style="font-size: 3vmin;">${currentPalette.colors[i].hex}</p>
-                    <img src="./assets/${imgString}">
+                    <img src="./assets/${imgString}" alt="${altText}">
                 </div>
             </article>`;           
     }
@@ -62,8 +65,11 @@ function displaySavedPalettes() {
             <div class="mini-color-box" style="background-color: ${savedPalettes[i].colors[2].hex}"></div>
             <div class="mini-color-box" style="background-color: ${savedPalettes[i].colors[3].hex}"></div>
             <div class="mini-color-box" style="background-color: ${savedPalettes[i].colors[4].hex}"></div>
-            <img src="./assets/Delete.png">
+            <img src="./assets/Delete.png" alt="Delete icon">
         </article>`;
+    }
+    if(savedPalettes.length === 0) {
+        savedSection.innerHTML = `<h3>Saved Palettes</h3>`;
     }
 }
 
@@ -93,9 +99,22 @@ function deleteSavedPalette(event) {
         for (var i = 0; i < savedPalettes.length; i++) {
             if (savedPalettes[i].id == clickedPaletteId) {
                 savedPalettes.splice(i, 1);
+                break;
             }
         }
         displaySavedPalettes();
+    }
+}
+
+function recallSavedPalette(event) {
+    if(event.target.className === 'mini-color-box') {
+        var clickedPaletteId = event.target.parentElement.id;
+        for (var i = 0; i < savedPalettes.length; i++) {
+            if (savedPalettes[i].id == clickedPaletteId) {
+                currentPalette = new Palette([...savedPalettes[i].colors]);
+            }
+        }
+        displayCurrentPalette();
     }
 }
 
