@@ -4,8 +4,10 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Schoolbell', cursive;
-    background-image: url(https://i.gifer.com/6ob.gif);
-    background-repeat: repeat;
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
 }
 
 main {
@@ -16,11 +18,13 @@ main {
 }
 
 main h1 {
+    color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    font-size: 13vmin;
+    font-size: 10vmin;
     margin-top: 3vmin;
     margin-bottom: 0;
     padding-bottom: 3vmin;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 aside {
@@ -29,15 +33,19 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 2vmin;
-    overflow: auto;
     flex-basis: 25%;
     margin-top: 2vmin;
     margin-bottom: 2vmin;
 }
 
 h3 {
+    color: rgba(0, 0, 0, 0.7);
     font-size: 2.5vmax;
     margin-bottom: 0px;
+}
+
+p {
+    text-transform: uppercase;
 }
 
 .color-widget-parent {
@@ -69,7 +77,12 @@ h3 {
     gap: 0.75vmin;
 }
 
-img {
+main img {
+    height: 3vmin;
+    width: 3vmin;
+}
+
+aside img {
     height: 2vmax;
     width: 2vmax;
 }
@@ -85,8 +98,9 @@ aside img:hover {
 }
 
 button {
-    font-size: 4vmin;
+    color: rgba(0, 0, 0, 0.7);
     font-family: 'Schoolbell', cursive;
+    font-size: 3.6vmin;
     background-color: #26c6da;
     box-shadow: 2px 2px black;
     border-radius: 8px;
@@ -116,6 +130,7 @@ button:hover {
     gap: 0.75vmin;
     margin-right: 0.5vw;
     margin-left: 0.5vw;
+    cursor: grab;
 }
 
 @media screen and (max-width: 140vh) {
