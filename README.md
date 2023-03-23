@@ -8,7 +8,7 @@ My project group and I created an application that allows users to generate, sav
 4. Run command open index.html to launch the application in the web browser
 
 ### Preview of App:
-[GitHub Pages Link](https://qrispi.github.io/colorandom/)
+[GitHub Pages Link](https://kirch1.github.io/colorandom-cohesive/)
 ![image](assets/screenshot.jpg)
 
 ### Context:
