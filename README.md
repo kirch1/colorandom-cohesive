@@ -9,7 +9,7 @@ My project group and I created an application that allows users to generate, sav
 
 ### Preview of App:
 [GitHub Pages Link](https://kirch1.github.io/colorandom-cohesive/)
-![image](assets/screenshot.jpg)
+![image](assets/colors.jpg)
 
 ### Context:
 This project was created during our 4th week in Turing. It took an estimated 20 hours of group collaboration and some additional solo/paired(2) sessions to implement the required functionality.
