@@ -1,5 +1,5 @@
 ### Abstract:
-My project group and I created an application that allows users to generate, save, and delete random color palettes. I added an extenstion to the project to make the colors cohesive. The technique for making the palette cohesive was using a Tatradic Palette (with an additional color being a dark/lighter version of the final tatradic color).
+My project group and I created an application that allows users to generate, save, and delete random color palettes. I added an extension to the project to make the colors cohesive. The technique for making the palette cohesive was using a Tetradic Palette (with an additional color being a dark/lighter version of the final tatradic color).
 
 ### Installation Instructions:
 1. Copy the SSH key on GitHub inside the code dropdown
